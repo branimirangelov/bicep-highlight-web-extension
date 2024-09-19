@@ -1,0 +1,30 @@
+{
+  "name": "bicep-highlight",
+  "displayName": "Bicep Highlight",
+  "description": "Bicep language highlight web extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bicep",
+      "aliases": ["Bicep", "bicep"],
+      "extensions": [".bicep",".bicepparam"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bicep",
+      "scopeName": "source.bicep",
+      "path": "./syntaxes/bicep.tmLanguage"
+    }]
+  },
+  "vsce": {
+    "baseImagesUrl": "https://github.com/Azure/bicep/blob/main/src/icons/bicep-logo-256.png",
+    "dependencies": true,
+    "yarn": false
+  }
+}
